@@ -1,0 +1,11 @@
+create database lukr;
+use lukr;
+
+create table users(
+user int(11) NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+login varchar(40) NOT NULL,
+password varchar(100) NOT NULL,
+admin bool DEFAULT 0,
+UNIQUE (login));
+
+insert into users (login,password,admin) value('inna','12345',1);
