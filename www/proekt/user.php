@@ -37,9 +37,9 @@
 		<div id="content_body"> 
   
    
-							<form class="form-wrapper">
-								<input id="search" placeholder="Пошук по країні" required="" type="text">
-								<input value="Пошук" id="submit" type="submit">	
+							<form action="search.php" class="form-wrapper">
+								
+								<input value="Пошук туру по країні" id="submit" type="submit">	
 							</form>
 						
 					
@@ -51,13 +51,15 @@
             		<td><h1>Місто</h1></td>
            	       	<td><h1>Готель</h1></td>
 	        		<td><h1>Дата в'їзду</h1></td>
-	        		<td><h1>Ціна </h1></td>
 					<td><h1>Кількість днів<h1></td>
+	        		<td><h1>Ціна <form action="sort.php" class="form-wrapper">
+								<input value="сортувати" id="submit" type="submit">	
+							</form></h1></td>
+					
        		    </tr>
 
 			<?php
 				$db = "meridian1";
-				
 				$link = mysql_connect('localhost', 'user', 'user');
 				if ( !$link )  die ("Неможливо підключитись до  MySQL");
 				{	
