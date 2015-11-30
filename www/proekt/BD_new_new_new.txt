@@ -1,0 +1,39 @@
+
+
+use Meridian2;
+
+create table Countries (
+id_country int (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name_country varchar(40) ,
+UNIQUE (name_country) );
+
+create table Cities (
+id_city int (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name_city varchar(40) ,
+id_country int not null references Cities(id_country),
+UNIQUE (name_city) );
+
+create table Hotels (
+id_hotel int (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name_hotel varchar(40) ,
+id_city int not null references Cities(id_city) );
+UNIQUE (name_hotel) );
+
+ create table Users(
+id_user int(11) NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+login varchar(40) NOT NULL,
+password varchar(100) NOT NULL,
+admin bool DEFAULT 0,
+UNIQUE (login));
+
+insert into users (login,password,admin) value('cyber','12345',1);
+
+create table Tours (
+id_tour int (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+id_country  int not null references Countries(id_country ),
+id_city int not null references Cities(id_city),
+id_hotel int not null references Hotels(id_hotel),
+start_date date,
+price int(10) ,
+days int(10),
+id_user_bron int references Users(id_user));
