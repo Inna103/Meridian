@@ -155,7 +155,9 @@ background-color:#FFF; /*highlight the background behind the text*/
     font-size: 30px;
 }
 
-
+.form {
+	color: yellow;
+}
 .words_menu
 {
     text-align:center;
@@ -177,8 +179,9 @@ background-color:#FFF; /*highlight the background behind the text*/
 	float:right;
 	width:152px;
 	margin:20px 0 40px 0;
-	background-color:#dfecf2;
+	background-color:#B0E0E6;
 	padding:10px 6px;
+	border-radius: 30px;
 }
 
 .input
@@ -276,6 +279,15 @@ h1 {
 	color:#2d9fce;
 	margin-top:0px;
 }
+
+
+h2 {
+	font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:white;
+	margin-top:0px;
+}
 .content
 {	padding: 0 15px 0 0; /*padding on the right is because the column if floating to the right*/
 	line-height:1.5em;
@@ -322,7 +334,7 @@ ul.box_list {
 	}
 
 	.box_yellow .title {
-	color:#ffa200;
+	color:#2d9fce;
 	font-family: "Liberation Sans", arial;
 	font-size:14px;
 	font-weight:bold;
@@ -374,7 +386,7 @@ ul.box_list {
 	font-size:11px;
 }
 .box_pink .title {
-	color:#ff005f;
+	color:#2d9fce;
 	font-family: "Liberation Sans", arial;
 	font-size:14px;
 	font-weight:bold;
@@ -410,7 +422,7 @@ ul.box_list {
 	font-size:11px;
 }
 .box_green .title {
-	color:#9db000;
+	color:#2d9fce;
 	font-family: "Liberation Sans", arial;
 	font-size:14px;
 	font-weight:bold;
@@ -593,7 +605,7 @@ font-size:16px;
 
 
 .form-wrapper {
-    width: 350px;
+    width: 200px;
     padding: 8px;
     margin: 20px auto;
     overflow: hidden;
@@ -654,7 +666,7 @@ font-size:16px;
     float: right;    
     border: 1px solid #00748f;
     height: 42px;
-    width: 100px;
+    width: 200px;
     padding: 0;
     cursor: pointer;
     font: bold 15px Arial, Helvetica;
